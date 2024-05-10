@@ -1,0 +1,58 @@
+Compiling eshell with make
+make: 'eshell' is up to date.
+Running tester...
+Testcase0 is running.
+Input: ls -l
+Testcase0: OK
+Testcase1 is running.
+Input: ls -l ; ls -al
+Testcase1: OK
+Testcase2 is running.
+Input: echo 'Hello'
+Testcase2: OK
+Testcase3 is running.
+Input: ls -l | tr /a-z/ /A-Z/
+Testcase3: OK
+Testcase4 is running.
+Input: ls -l , ls -al
+Testcase4: OK
+Testcase5 is running.
+Input: ls -l ; echo 'Hello'
+Testcase5: OK
+Testcase6 is running.
+Input: (ls -l ; echo 'Hello') | grep x | tr /a-g/ /A-G/
+Testcase6: OK
+Testcase7 is running.
+Input: (ls -l /usr/lib | grep x) | ( tr /a-c/ /A-C/ , echo done)
+Testcase7: OK
+Testcase8 is running.
+Input: (ls -l /usr/lib | grep x) | ( tr /a-z/ /A-Z/ , echo done) | wc -l
+Testcase8: OK
+Testcase9 is running.
+Input: (ls -l /usr/lib | grep a ) | (cat ; echo Hello ; ls -al /usr/lib)
+Testcase9: OK
+Testcase10 is running.
+Input: ls -al /usr/lib | tr /a-l/ /A-L/ | ( grep A , grep B )
+The outputs do not match 
+Testcase10: FAILED
+Testcase11 is running.
+Input: ls -al /usr/lib | tr /a-l/ /A-L/ | ( grep A , grep B , wc -l )
+The outputs do not match 
+Testcase11: FAILED
+Testcase12 is running.
+Input: ls -al /usr/lib | tr /a-l/ /A-L/ | ( grep A , grep B , wc -l , wc -c )
+The outputs do not match 
+Testcase12: FAILED
+Testcase13 is running.
+Input: ls -l ; echo 'Hello' ; echo Welp ; ls -al /usr/lib 
+Testcase13: OK
+Testcase14 is running.
+Input: (ls -l /usr/lib | grep t ) | (cat ; echo Hello ; ls -al /usr/lib)
+Testcase14: OK
+Testcase15 is running.
+Input: (ls -l /usr/lib | grep s ) | (cat ; echo Hello ; ls -al /usr/lib)
+Testcase15: OK
+Testcase16 is running.
+Input: (ls -l /usr/lib | grep h ) | (cat ; echo Hello ; ls -al /usr/lib)
+Testcase16: OK
+
